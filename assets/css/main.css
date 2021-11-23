@@ -2628,20 +2628,19 @@ input[type="button"],
   -ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   background: #544d55;
-  border-radius: 4px;
+  border-radius: 10px;
   border: 0;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-size: 0.9em;
-  font-weight: 700;
-  letter-spacing: 0.125em;
+  font-size: 1em;
+  font-weight: 600;
   line-height: 3.25em;
   min-width: 15em;
   padding: 0 1.5em;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
+  box-shadow: 2px 2px 6px rgb(183 183 183 / 75%);
 }
 
 input[type="submit"]:hover,
@@ -2663,8 +2662,7 @@ input[type="reset"].alt,
 input[type="button"].alt,
 .button.alt {
   background: none;
-  box-shadow: inset 0 0 0 1px rgba(224, 224, 224, 0.75);
-  color: #544d55;
+  color: #6e6e6e;
 }
 
 input[type="submit"].alt:hover,
@@ -2679,6 +2677,22 @@ input[type="reset"].alt:active,
 input[type="button"].alt:active,
 .button.alt:active {
   background: rgba(224, 224, 224, 0.35);
+}
+
+input[type="submit"].primary,
+input[type="reset"].primary,
+input[type="button"].primary,
+.button.primary {
+  background: rgb(233, 37, 63);
+  box-shadow: 2px 2px 4px rgb(183 183 183 / 75%);
+  color: #fff;
+}
+
+input[type="submit"].primary:hover,
+input[type="reset"].primary:hover,
+input[type="button"].primary:hover,
+.button.primary:hover {
+  background: rgba(233, 37, 63, 0.8);
 }
 
 input[type="submit"].fit,
@@ -3588,4 +3602,17 @@ ul.stars li::before {
   right: -0.5em;
   top: -0.5em;
   border-color: #e54e65 #e54e65 #e54e65 #de213e;
+}
+
+.airdrop-box {
+  color: #e9253f;
+  display: block;
+  text-align: center;
+  font-size: 3em;
+  border: 4px solid #e9253f;
+  width: 300px;
+  margin: auto;
+  line-height: 1.5em;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgb(183 183 183 / 75%);
 }

@@ -149,6 +149,21 @@
     });
   });
   observer.observe(counterTag);
+
+  //Animated arrows
+  $(".animated-arrows").each((idx, elem) => {
+    const arrows = $(elem);
+    setInterval(() => {
+      const big = arrows.find(".fa-chevron-right");
+      let nextBig = big.next();
+      if (nextBig.length === 0)
+        nextBig = arrows.find(".fa-angle-right").first();
+      big.removeClass("fa-chevron-right");
+      big.addClass("fa-angle-right");
+      nextBig.removeClass("fa-angle-right");
+      nextBig.addClass("fa-chevron-right");
+    }, 400);
+  });
 })(jQuery);
 
 //Add snow effect

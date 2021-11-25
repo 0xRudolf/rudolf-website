@@ -2679,6 +2679,17 @@ input[type="button"].alt:active,
   background: rgba(224, 224, 224, 0.35);
 }
 
+input[type="submit"].disabled,
+input[type="reset"].disabled,
+input[type="button"].disabled,
+.button.disabled,
+input[type="submit"].disabled:hover,
+input[type="reset"].disabled:hover,
+input[type="button"].disabled:hover,
+.button.disabled:hover {
+  background: #e7e7e7;
+}
+
 input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary,

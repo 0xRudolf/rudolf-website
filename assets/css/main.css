@@ -3643,5 +3643,5 @@ ul.stars li::before {
   fill: none;
   stroke: #5b5b5b;
   stroke-width: 1px;
-  stroke-dasharray: 5px;
+  stroke-dasharray: 4px;
 }

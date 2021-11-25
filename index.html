@@ -76,8 +76,8 @@
         <section style="text-align: center">
           <img src="images/rudolf-dodo-ido.jpg" width="100%" />
           <ul class="stars" style="text-align: left; margin: 1em 0">
-            <li>IDO Allocation: 840M $RUDOLF</li>
-            <li>IDO Price: 1$RUDOLF = 0.0002 USDT</li>
+            <li>IDO Allocation: 84B $RUDOLF</li>
+            <li>IDO Price: 1$RUDOLF = 0.000001 USDT</li>
             <li>Personal hard cap: 500 USDT</li>
             <li>No whitelist</li>
             <li>No lock time</li>
@@ -330,47 +330,56 @@
           <header>
             <h3>
               Initial Supply <br /><span style="color: #888888">
-                4.200.000.000 $RUDOLF</span
+                420B $RUDOLF</span
               >
             </h3>
           </header>
           <div class="table-wrapper">
-            <table class="default" style="font-size: 0.8em">
+            <table class="default" style="font-size: 0.8em; font-weight: 600">
               <tbody>
-                <tr>
-                  <td width="15%">40%</td>
+                <tr style="color: #e86478">
+                  <td width="15%">15%</td>
+                  <td>LP Locked</td>
+                  <td width="40%" style="text-align: right">63B $RUDOLF</td>
+                </tr>
+                <tr style="color: #ab715e">
+                  <td width="25%">25%</td>
                   <td>LP Reserves</td>
-                  <td width="40%" style="text-align: right">1.68B $RUDOLF</td>
+                  <td width="40%" style="text-align: right">105B $RUDOLF</td>
                 </tr>
-                <tr>
+                <tr style="color: #f8cb4e">
                   <td>20%</td>
-                  <td>IDO</td>
-                  <td width="40%" style="text-align: right">840M $RUDOLF</td>
+                  <td>Presale</td>
+                  <td width="40%" style="text-align: right">84B $RUDOLF</td>
                 </tr>
-                <tr>
+                <tr style="color: #4eb980">
                   <td>20%</td>
                   <td>Private Sales</td>
-                  <td width="40%" style="text-align: right">840M $RUDOLF</td>
+                  <td width="40%" style="text-align: right">84B $RUDOLF</td>
                 </tr>
-                <tr>
+                <tr style="color: #92d2e7">
                   <td width="15%">20%</td>
                   <td>Contributors</td>
-                  <td width="40%" style="text-align: right">840M $RUDOLF</td>
+                  <td width="40%" style="text-align: right">84B $RUDOLF</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <div
+            id="tokenomics-pie"
+            data-shares="[15,25,20,20,20]"
+            data-labels='["LP Locked", "LP reserves", "Contributors", "Private sales", "Presale"]'
+            data-colors='["#e86478","#ab715e","#92d2e7","#4eb980","#f8cb4e"]'
+          ></div>
         </section>
         <section>
           <header>
             <h3>
               <span style="color: #e86478">#XmasAirdrop</span>
-              Emission<br /><span style="color: #888888">
-                1.200.000.000 $RUDOLF</span
-              >
+              Emission<br /><span style="color: #888888"> 120B $RUDOLF</span>
             </h3>
             <blockquote>
-              Every Christmas, 1.2B $RUDOLF are airdropped to holders, with a 12
+              Every Christmas, 120B $RUDOLF are airdropped to holders, with a 12
               month linear vesting
             </blockquote>
           </header>
@@ -544,6 +553,7 @@
     <script src="assets/js/util.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/countup.js@1.9.3/dist/countUp.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

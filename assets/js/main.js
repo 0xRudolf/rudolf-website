@@ -213,8 +213,8 @@
   // for labels and polylines
   let outerArc = d3.svg
     .arc()
-    .innerRadius(radius * 0.75)
-    .outerRadius(radius * 0.75);
+    .innerRadius(radius * 0.78)
+    .outerRadius(radius * 0.78);
 
   let pie = d3.layout.pie().value((d) => d);
 

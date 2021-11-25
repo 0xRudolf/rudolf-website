@@ -3642,6 +3642,6 @@ ul.stars li::before {
 #tokenomics-pie polyline {
   fill: none;
   stroke: #5b5b5b;
-  stroke-width: 2px;
+  stroke-width: 1px;
   stroke-dasharray: 5px;
 }

@@ -216,12 +216,18 @@
     .innerRadius(radius * 0.75)
     .outerRadius(radius * 0.75);
 
+  let innerArc = d3.svg
+    .arc()
+    .outerRadius(radius * 0.5)
+    .innerRadius(radius * 0.5);
+
   let pie = d3.layout.pie().value((d) => d);
 
   let draw = function () {
     svg.append("g").attr("class", "lines");
     svg.append("g").attr("class", "slices");
     svg.append("g").attr("class", "labels");
+    svg.append("g").attr("class", "figures");
 
     // define slice
     let slice = svg
@@ -276,6 +282,29 @@
       .duration(secDur)
       .style("opacity", 1);
 
+    let figures = svg.select(".figures").selectAll("text").data(pie(dataset));
+    figures
+      .enter()
+      .append("text")
+      //.attr("dy", "0.35em")
+      .style("opacity", 0)
+      .style("fill", (d, i) => "#fff")
+      .text((d, i) => `${dataset[i]}%`)
+      .attr("transform", (d) => {
+        // calculate innerArc centroid for 'this' slice
+        let pos = innerArc.centroid(d);
+        if (pos[1] < 1) pos[1] = pos[1] + 2;
+        if (pos[1] < -30) pos[1] = pos[1] + 5;
+        if (pos[0] < -49) pos[0] = pos[0] + 5;
+        return `translate(${pos})`;
+      })
+      .style("text-anchor", "middle")
+
+      .transition()
+      .delay((d, i) => arcAnimDur + i * secIndividualdelay + secDur)
+      .duration(secDur)
+      .style("opacity", 1);
+
     let polyline = svg
       .select(".lines")
       .selectAll("polyline")
@@ -286,8 +315,6 @@
       .append("polyline")
       .style("opacity", 0.5)
       .attr("points", (d) => {
-        let pos = outerArc.centroid(d);
-        pos[0] = radius * 0.7 * (midAngle(d) < Math.PI ? 1 : -1);
         return [arc.centroid(d), arc.centroid(d), arc.centroid(d)];
       })
       .transition()

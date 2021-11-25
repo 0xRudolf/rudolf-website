@@ -3635,6 +3635,11 @@ ul.stars li::before {
   font-size: 0.8em;
   font-weight: 600;
 }
+#tokenomics-pie .figures text {
+  font-size: 0.7em;
+  font-weight: 600;
+  cursor: pointer;
+}
 
 #tokenomics-pie polyline {
   fill: none;

@@ -3616,3 +3616,32 @@ ul.stars li::before {
   border-radius: 10px;
   box-shadow: 2px 2px 6px rgb(183 183 183 / 75%);
 }
+
+/* Tokenomics pie */
+#tokenomics-pie {
+  width: 340px;
+  height: 200px;
+  margin: 0 auto 2em;
+}
+
+#tokenomics-pie path {
+  stroke: #fff;
+  /* stroke-width: 5px; */
+  cursor: pointer;
+  transition: stroke-width 250ms;
+}
+#tokenomics-pie path:hover {
+  stroke-width: 10px;
+}
+
+#tokenomics-pie text {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+#tokenomics-pie polyline {
+  fill: none;
+  stroke: #5b5b5b;
+  stroke-width: 2px;
+  stroke-dasharray: 5px;
+}

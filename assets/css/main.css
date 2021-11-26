@@ -2679,6 +2679,13 @@ input[type="button"].alt:active,
   background: rgba(224, 224, 224, 0.35);
 }
 
+.button.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+}
+
 input[type="submit"].disabled,
 input[type="reset"].disabled,
 input[type="button"].disabled,
@@ -3657,4 +3664,8 @@ ul.stars li::before {
   stroke: #5b5b5b;
   stroke-width: 1px;
   stroke-dasharray: 4px;
+}
+
+.hex {
+  font-family: monospace, sans-serif;
 }

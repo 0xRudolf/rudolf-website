@@ -3671,3 +3671,25 @@ ul.stars li::before {
   word-break: break-all;
   display: block;
 }
+
+/* Presale countdown */
+#presale-countdown {
+  margin: 0 -1em 1em;
+  padding: 1em 0;
+}
+#presale-countdown ul {
+  margin: 0;
+}
+
+#presale-countdown li {
+  display: inline-block;
+  font-size: 0.8em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+#presale-countdown li span {
+  display: block;
+  font-size: 1.5rem;
+}

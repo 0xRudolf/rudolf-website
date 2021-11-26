@@ -3668,4 +3668,6 @@ ul.stars li::before {
 
 .hex {
   font-family: monospace, sans-serif;
+  word-break: break-all;
+  display: block;
 }
